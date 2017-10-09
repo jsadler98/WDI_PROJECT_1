@@ -1,24 +1,24 @@
-$(() => {
-  const $unicorn = $('.unicorn');
 
-  function moveUnicorn(){
-    $(window).on('keydown', function(e) {
-      const unicornPosition = $unicorn.position();
+$(init);
 
-      if(e.keyCode == 37) {
-        $unicorn.animate({'left': '-=70px'});
-      }else if (e.keyCode == 39) {
-        $unicorn.animate({'left': '+=70px'});
-      }
-    });
-  }
-  moveUnicorn();
+let $unicorn;
 
-  $(window).on('keyup', function() {
-    $('.unicorn').stop();
-  });
-});
+function init() {
+  $unicorn = $('.unicorn');
 
+  $(document).on('keydown', handleKeyCode);
+}
+
+function handleKeyCode(e) {
+  const playerLeftValue = parseInt($unicorn.css('left'));
+
+  if (e.keyCode === 37 && playerLeftValue !== 0)   handlePlayerMovement('-');
+  if (e.keyCode === 39 && playerLeftValue <= 340) handlePlayerMovement('+');
+}
+
+function handlePlayerMovement(operation) {
+  $unicorn.animate({ 'left': `${operation}=20` }, 0);
+}
 
 
 // $(() => {
