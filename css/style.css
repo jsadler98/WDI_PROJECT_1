@@ -13,7 +13,7 @@ main {
   margin-bottom: 40px;
   width: 600px;
   margin: 0 auto;
-  background-color: white;
+  background-color:white;
 }
 
 
@@ -29,14 +29,16 @@ h1 {
   width: 300px;
   border: 1px solid green;
   margin-left: 150px;
+  position: relative;
 }
 
 .unicorn {
+  position: absolute;
   border: 1px solid purple;
   width: 50px;
   height: 50px;
-  margin-top: 545px ;
-  margin-left: 130px;
+  bottom: 0px;
+  left:120px;
 }
 
 .coins {
