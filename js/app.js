@@ -6,7 +6,6 @@ function init() {
   $unicorn = $('.unicorn');
   $(document).on('keydown', handleKeyCode);
   createCoin();
-  
   // animateFall();
 }
 
@@ -26,6 +25,8 @@ function createCoin() {
   coin.css('left', `${Math.floor(Math.random() * 390)}px`);
   $('.playingArea').append(coin);
   animateCoin(coin);
+setInterval(() => {
+}, 1000);
 }
 
 function animateCoin(coin) {
