@@ -1,12 +1,13 @@
-
 $(init);
 
 let $unicorn;
 
 function init() {
   $unicorn = $('.unicorn');
-
   $(document).on('keydown', handleKeyCode);
+  createCoin();
+  
+  // animateFall();
 }
 
 function handleKeyCode(e) {
@@ -20,32 +21,31 @@ function handlePlayerMovement(operation) {
   $unicorn.animate({ 'left': `${operation}=20` }, 0);
 }
 
+function createCoin() {
+  const coin = $('<div class="coins"></div>');
+  coin.css('left', `${Math.floor(Math.random() * 390)}px`);
+  $('.playingArea').append(coin);
+  animateCoin(coin);
+}
 
-// $(() => {
-//   const $unicorn = $('.unicorn');
-//   const unicornPosition = $unicorn.position().left
-//
-//   function moveUnicorn(){
-//     $(window).on('keydown', function(e) {
-//       // if ($unicornPosition > 0 && $unicornPosition < 250) {
-//
-//       if (unicornPosition > 0  && unicornPosition <500 ) {
-//         if(e.keyCode == 37) {
-//         $unicorn.animate({'margin-left': '-=90px'});
-//         }else if (e.keyCode == 39) { // when the user clicks right arrow key the unicorn moves right
-//           $unicorn.animate({'margin-left': '+=90px'});
-//           console.log(unicornPosition);
-//         }
-//       }
-//
-//     });
+function animateCoin(coin) {
+  coin.animate({top: '600'}, 2000);
+}
+
+
+function randomWidth() {
+  const randomWidth = Math.floor(Math.random()*500);
+  $.coins({'absolute': randomWidth});
+}
+
+// function animateFall(){
+//   $coins.animate({top: '600'}, 2000, callback);
+//   function callback() {
 //   }
-//
-//   $(window).on('keyup', function() {
-//     $('.unicorn').stop();
-//   });
-//   };
-// });
 // }
-// moveUnicorn();
-// })
+
+
+
+// setinterval(function(){
+//   $("#animate").animate({top:'-50'},1000)
+// },2000);
