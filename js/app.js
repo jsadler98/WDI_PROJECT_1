@@ -25,19 +25,22 @@ function createCoin() {
   coin.css('left', `${Math.floor(Math.random() * 390)}px`);
   $('.playingArea').append(coin);
   animateCoin(coin);
-setInterval(() => {
-}, 1000);
 }
+ setInterval(function(){
+   createCoin()}, 150
+);
 
 function animateCoin(coin) {
-  coin.animate({top: '600'}, 2000);
+coin.animate({top: '600'}, 2000, function callback(){
+  coin.remove();
+});
 }
 
 
-function randomWidth() {
-  const randomWidth = Math.floor(Math.random()*500);
-  $.coins({'absolute': randomWidth});
-}
+// function randomWidth() {
+//   const randomWidth = Math.floor(Math.random()*500);
+//   $.coins({'absolute': randomWidth});
+// }
 
 // function animateFall(){
 //   $coins.animate({top: '600'}, 2000, callback);
