@@ -3,6 +3,7 @@ $(init);
 let $time;
 let $unicorn;
 let score = 0;
+let sec;
 
 timer();
 
@@ -13,7 +14,7 @@ function init() {
 }
 
 function timer(){
-  let sec = 59;
+  sec = 59;
   let timer = setInterval(function() {
     $('#time').html(sec--);
     if (sec == -2){
@@ -50,6 +51,11 @@ function updateScore() {
   let score = $score.html();
   score++
   $score.html(score);
+  if (sec == -2){
+    console.log(score);
+    score = 0;
+    $('#score').html(score);
+  }
 }
 
 function animateCoin(coin) {
