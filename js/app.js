@@ -2,9 +2,6 @@ $(init);
 
 let $time;
 let $unicorn;
-let score = 0;
-let sec;
-
 timer();
 
 function init() {
@@ -14,14 +11,14 @@ function init() {
 }
 
 function timer(){
-  sec = 59;
+  let sec = 59;
   let timer = setInterval(function() {
     $('#time').html(sec--);
     if (sec == -2){
       sec = 0;
       $('#time').html(sec);
     }
-  }, 700);
+  }, 900);
 }
 
 function handleKeyCode(e) {
@@ -43,7 +40,7 @@ function createCoin() {
 }
 
 setInterval(function(){
-  createCoin()}, 90
+  createCoin()}, 100
 );
 
 function updateScore() {
@@ -51,11 +48,6 @@ function updateScore() {
   let score = $score.html();
   score++
   $score.html(score);
-  if (sec == -2){
-    console.log(score);
-    score = 0;
-    $('#score').html(score);
-  }
 }
 
 function animateCoin(coin) {
