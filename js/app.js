@@ -1,11 +1,12 @@
 $(init);
 
+let $time;
 let $unicorn;
+let score = 0;
+
 timer();
 
-
 function init() {
-
   $unicorn = $('.unicorn');
   $(document).on('keydown', handleKeyCode);
   $(window).on('load',timer);
@@ -15,10 +16,11 @@ function timer(){
   let sec = 59;
   let timer = setInterval(function() {
     $('#time').html(sec--);
-    if (sec == -1) {
-      clearInterval(timer);
+    if (sec == -2){
+      sec = 0;
+      $('#time').html(sec);
     }
-  }, 800);
+  }, 700);
 }
 
 function handleKeyCode(e) {
@@ -38,16 +40,16 @@ function createCoin() {
   $('.playingArea').append(coin);
   animateCoin(coin);
 }
-setInterval(function(){
-  createCoin()}, 100
-);
 
+setInterval(function(){
+  createCoin()}, 90
+);
 
 function updateScore() {
   const $score = $('#score')
-    let score = $score.html();
-    score++
-    $score.html(score);
+  let score = $score.html();
+  score++
+  $score.html(score);
 }
 
 function animateCoin(coin) {
