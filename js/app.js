@@ -8,10 +8,11 @@ let interval = null;
 let timerInterval = null;
 
 function init() {
+
+  $(document).on('keydown', handleKeyCode);
   $unicorn = $('.unicorn');
   $startButton = $('.startbutton');
   $restartButton = $('.restartbutton');
-  $(document).on('keydown', handleKeyCode);
   $startButton.on('click', startButton);
   $restartButton.on('click', restartButton);
   $score = $('#score');
