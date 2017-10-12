@@ -28,7 +28,7 @@ function timer() {
         gameOver();
       }
     }
-  }, 600);
+  }, 1000);
 }
 
 function startButton() {
@@ -58,7 +58,7 @@ function createCoin() {
     coin.css('left', `${Math.floor(Math.random() * $(window).width())}px`);
     $('.playingArea').append(coin);
     animateCoin(coin);
-  }, 100);
+  }, 200);
 }
 
 function updateScore() {
