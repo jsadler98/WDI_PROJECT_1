@@ -3,15 +3,18 @@ $(init);
 let $time;
 let $unicorn;
 let $sec;
-let $score
+let $score;
 let interval = null;
 let timerInterval = null;
 
 function init() {
   $unicorn = $('.unicorn');
   $startButton = $('.startbutton');
+  $restartButton = $('.restartbutton');
   $(document).on('keydown', handleKeyCode);
   $startButton.on('click', startButton);
+  $restartButton.on('click', restartButton);
+  $score = $('#score');
 }
 
 function timer() {
@@ -23,12 +26,9 @@ function timer() {
       $('#time').html(sec);
       if (sec === 0){
         gameOver();
-        clearInterval(timerInterval);
       }
     }
-  }, 50);
-
-
+  }, 600);
 }
 
 function startButton() {
@@ -36,9 +36,14 @@ function startButton() {
   timer();
 }
 
+function restartButton() {
+  createCoin();
+  timer();
+  $score.html(0);
+}
+
 function handleKeyCode(e) {
   playerLeftValue = parseInt($unicorn.css('left'));
-
   if (e.keyCode === 37 && playerLeftValue !== 0)   handlePlayerMovement('-');
   if (e.keyCode === 39 && playerLeftValue <= $(window).width()) handlePlayerMovement('+');
 }
@@ -60,6 +65,7 @@ function updateScore() {
   $score = $('#score')
   score = $score.html();
   score++
+  console.log(score);
   $score.html(score);
 }
 
@@ -98,5 +104,5 @@ function animateCoin(coin) {
 }
 function gameOver() {
   clearInterval(interval);
-  console.log('over');
+  clearInterval(timerInterval);
 }
