@@ -1,13 +1,13 @@
 body {
-background:pink;
+  background:pink;
 
 }
 
 .coins{
   width: 10px;
   height: 10px;
-  background-color: #dd00f3;
-  border: 1px #dd00f3 solid;
+  background-color: #EE82EE;
+  border: 1px #EE82EE solid;
   display: inline-block;
   position: absolute;
   top: 0;
@@ -16,17 +16,15 @@ background:pink;
 
 h1 {
   text-align: center;
-  color: #dd00f3;
-
-
-  font-size: 100px;
+  color: #EE82EE;
+  font-size: 90px;
   font-family: '8BITWONDERNominal';
 }
 
 .playingArea{
   width: 100%;
   height: 600px;
-  border: 2px solid #dd00f3;
+  border: 2px solid #EE82EE;
   position: relative;
   overflow: hidden;
   background: pink;
@@ -34,28 +32,31 @@ h1 {
 
 .unicorn{
   position: absolute;
-  bottom: 2px;
+  bottom: 0px;
 }
 
+.startbutton {
+margin: 0 auto;
+display: block;
+}
+
+
 #score {
-color: #dd00f3;
-font-family: '8BITWONDERNominal';
-margin-right: 100px;
-font-size: 50px;
-float: right;
+  color: #EE82EE;
+  font-family: '8BITWONDERNominal';
+  font-size: 50px;
+  float: right;
 }
 
 .scoreboard {
-  color: #dd00f3;
+  color: #EE82EE;
   font-family: '8BITWONDERNominal';
-  margin-right: 100px;
   font-size: 50px;
   float: right;
 }
 
 .timer {
-  color: #dd00f3;
+  color: #EE82EE;
   font-family: '8BITWONDERNominal';
-  margin-left: 100px;
   font-size:50px;
 }

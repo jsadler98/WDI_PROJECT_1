@@ -2,27 +2,42 @@ $(init);
 
 let $time;
 let $unicorn;
-timer();
+let $sec;
+let $score
+let interval = null;
+let timerInterval = null;
 
 function init() {
   $unicorn = $('.unicorn');
+  $startButton = $('.startbutton');
   $(document).on('keydown', handleKeyCode);
-  $(window).on('load',timer);
+  $startButton.on('click', startButton);
 }
 
-function timer(){
-  let sec = 59;
-  let timer = setInterval(function() {
+function timer() {
+  sec = 29;
+  timerInterval = setInterval(function() {
     $('#time').html(sec--);
     if (sec == -2){
       sec = 0;
       $('#time').html(sec);
+      if (sec === 0){
+        gameOver();
+        clearInterval(timerInterval);
+      }
     }
-  }, 900);
+  }, 50);
+
+
+}
+
+function startButton() {
+  createCoin();
+  timer();
 }
 
 function handleKeyCode(e) {
-  const playerLeftValue = parseInt($unicorn.css('left'));
+  playerLeftValue = parseInt($unicorn.css('left'));
 
   if (e.keyCode === 37 && playerLeftValue !== 0)   handlePlayerMovement('-');
   if (e.keyCode === 39 && playerLeftValue <= $(window).width()) handlePlayerMovement('+');
@@ -33,19 +48,17 @@ function handlePlayerMovement(operation) {
 }
 
 function createCoin() {
-  const coin = $('<div class="coins"></div>');
-  coin.css('left', `${Math.floor(Math.random() * $(window).width())}px`);
-  $('.playingArea').append(coin);
-  animateCoin(coin);
+  interval = setInterval(function () {
+    const coin = $('<div class="coins"></div>');
+    coin.css('left', `${Math.floor(Math.random() * $(window).width())}px`);
+    $('.playingArea').append(coin);
+    animateCoin(coin);
+  }, 100);
 }
 
-setInterval(function(){
-  createCoin()}, 100
-);
-
 function updateScore() {
-  const $score = $('#score')
-  let score = $score.html();
+  $score = $('#score')
+  score = $score.html();
   score++
   $score.html(score);
 }
@@ -82,4 +95,8 @@ function animateCoin(coin) {
       $(this).remove();
     }
   });
+}
+function gameOver() {
+  clearInterval(interval);
+  console.log('over');
 }
