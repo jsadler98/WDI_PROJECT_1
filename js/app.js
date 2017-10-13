@@ -8,7 +8,6 @@ let interval = null;
 let timerInterval = null;
 
 function init() {
-
   $(document).on('keydown', handleKeyCode);
   $unicorn = $('.unicorn');
   $startButton = $('.startbutton');
@@ -35,6 +34,8 @@ function timer() {
 function startButton() {
   createCoin();
   timer();
+  let audio = new Audio('sounds/gravityfallsunicornneighing.wav');
+  audio.play();
 }
 
 function restartButton() {

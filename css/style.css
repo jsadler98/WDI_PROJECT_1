@@ -10,8 +10,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
-  border: 2px solid #EE82EE;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 5px #EE82EE;
+
 }
 
 h1 {
@@ -19,12 +21,13 @@ h1 {
   color: #EE82EE;
   font-size: 87px;
   font-family: '8BITWONDERNominal';
+  text-shadow: 2px 2px 2px pink, 3px 3px 3px #EE82EE;
 }
 
 .playingArea{
   width: 100%;
   height: 600px;
-  border: 5px solid #EE82EE;
+  border: 2px solid #EE82EE;
   position: relative;
   overflow: hidden;
   background: pink;
@@ -72,10 +75,12 @@ h1 {
   font-family: '8BITWONDERNominal';
   font-size: 50px;
   float: right;
+  text-shadow: 2px 2px 2px pink, 3px 3px 3px #EE82EE;
 }
 
 .timer {
   color: #EE82EE;
   font-family: '8BITWONDERNominal';
   font-size:50px;
+  text-shadow: 2px 2px 2px pink, 3px 3px 3px #EE82EE;
 }
