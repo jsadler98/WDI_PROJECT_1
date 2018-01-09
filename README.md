@@ -11,4 +11,4 @@ The idea with this game was to create something very simple but addictive. When 
 
 ## App Link
 
-![](https://unicornsimulator.herokuapp.com/)
+https://unicornsimulator.herokuapp.com/
