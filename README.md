@@ -26,3 +26,17 @@ Playing area:
 In game action:
 
 ![Imgur](https://i.imgur.com/DcwiorF.png)
+
+## What was a success?
+
+My greatest achievement during this project was getting the basic functionality working aka getting the character to move side to side and getting the items to fall, This went very well for me and I enjoyed it alot as I could explore the interenet and the world of JavaScript for solutions and tips to get this functionality working.
+
+```function handleKeyCode(e) {
+  playerLeftValue = parseInt($unicorn.css('left'));
+  if (e.keyCode === 37 && playerLeftValue !== 0)   handlePlayerMovement('-');
+  if (e.keyCode === 39 && playerLeftValue <= $(window).width()) handlePlayerMovement('+');
+}
+
+function handlePlayerMovement(operation) {
+  $unicorn.animate({ 'left': `${operation}=20` }, 0);
+}```
