@@ -17,4 +17,8 @@ https://unicornsimulator.herokuapp.com/
 
 Title Screen: 
 
+![Imgur](https://i.imgur.com/I5pXxrj.png)
+
+Playing area: 
+
 ![Imgur](https://i.imgur.com/rQZj3wS.png)
