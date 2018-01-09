@@ -15,7 +15,7 @@ https://unicornsimulator.herokuapp.com/
 
 ## Screenshots
 
-Title Screen: 
+Title: 
 
 ![Imgur](https://i.imgur.com/I5pXxrj.png)
 
