@@ -22,3 +22,7 @@ Title:
 Playing area: 
 
 ![Imgur](https://i.imgur.com/rQZj3wS.png)
+
+In game action:
+
+![Imgur](https://i.imgur.com/DcwiorF.png)
