@@ -35,6 +35,7 @@ Example code:
 
 This is part of the basic functionality that helps us control the unicorn with the arrow keys as we used the keyboards keycodes for the left and right arrow keys.
 
+```
 function handleKeyCode(e) {
   playerLeftValue = parseInt($unicorn.css('left'));
   if (e.keyCode === 37 && playerLeftValue !== 0)   handlePlayerMovement('-');
@@ -44,6 +45,9 @@ function handleKeyCode(e) {
 function handlePlayerMovement(operation) {
   $unicorn.animate({ 'left': `${operation}=20` }, 0);
 }
+```
 
 ## Challenges
+
+
 
