@@ -49,5 +49,9 @@ function handlePlayerMovement(operation) {
 
 ## Challenges
 
+During this project a big challenge for me was getting collision to work on my game as I needed it so that the unicorn could collect the falling coins, this was a long and complicated task and it consumed most of my time during this project but after reading endless StackOverflow posts and getting help off my colleagues I finally got it working. This was a huge lesson for me as I realised that some parts of code are like mini projects and take alot of time and studying to get working.
 
+## Conclusion 
+
+Overall this project was great as it was good to get to study and learn Javascript, HTML5 and CSS3 as individuals making a cool game.
 
